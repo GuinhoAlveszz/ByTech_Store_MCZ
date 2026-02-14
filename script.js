@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const CONFIG = {
-    whatsappNumber: "5582999999999", 
+    whatsappNumber: "5582994165240", 
     storeLocation: { lat: -9.5534, lng: -35.7585 }, // Maceió
     locationLink: "https://maps.google.com/?q=-9.5534,-35.7585", // Link direto
     prices: { baseFee: 10.00, midFee: 20.00, perKm: 4.00 }
@@ -257,5 +257,6 @@ function finalizeWhatsApp() {
     if(deliveryInfo.type !== 'Levar na Loja') msg += `\nEnd: ${deliveryInfo.address}\nTaxa: ${deliveryInfo.fee}`;
     window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
 }
+
 
 function mascaraCep(t) { t.value = t.value.replace(/\D/g,"").replace(/^(\d{5})(\d)/,"$1-$2"); }
