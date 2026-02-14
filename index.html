@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ByTech Store - App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cyber-grid-bg"></div>
+
+    <section id="home-screen" class="screen active">
+        
+        <div class="logo-area">
+            <img src="logo.png" alt="ByTech Logo" class="main-logo" onerror="this.style.display='none'; document.getElementById('alt-logo').style.display='block'">
+            
+            <div id="alt-logo" class="logo" style="display:none;">
+                <i class="fas fa-microchip"></i> BYTECH <span class="neon-text">STORE</span>
+            </div>
+            
+            <p class="subtitle">SOLUÇÕES EM HARDWARE & SOFTWARE</p>
+        </div>
+
+        <div class="home-menu">
+            <button class="btn-home btn-glow" onclick="goToDiagnosis()">
+                <div class="icon-box"><i class="fas fa-stethoscope"></i></div>
+                <div class="text-box">
+                    <strong>PRÉ-DIAGNÓSTICO</strong>
+                    <span>Descubra o problema agora</span>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </button>
+
+            <button class="btn-home" onclick="openWhatsApp()">
+                <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
+                <div class="text-box">
+                    <strong>FALAR COM TÉCNICO</strong>
+                    <span>Atendimento rápido</span>
+                </div>
+            </button>
+
+            <button class="btn-home" onclick="openMap()">
+                <div class="icon-box"><i class="fas fa-map-location-dot"></i></div>
+                <div class="text-box">
+                    <strong>NOSSA LOJA</strong>
+                    <span>Ver no Google Maps</span>
+                </div>
+            </button>
+        </div>
+
+        <div class="info-card">
+            <p><i class="fas fa-map-pin neon-icon"></i> <strong>Maceió - AL</strong><br>Clima Bom</p>
+            <div class="divider"></div>
+            <p><i class="far fa-clock neon-icon"></i> Seg a Sex: 08h às 18h<br>Sáb: 08h às 12h</p>
+        </div>
+
+    </section>
+
+    <section id="diagnosis-screen" class="screen hidden">
+        <header>
+            <div class="header-compact">
+                <button class="btn-mini-back" onclick="exitDiagnosis()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <span class="header-title">DIAGNÓSTICO</span>
+            </div>
+        </header>
+
+        <main id="app-container">
+            <button id="btn-back" class="btn-back hidden" onclick="goBack()">
+                <i class="fas fa-chevron-left"></i> VOLTAR
+            </button>
+
+            <div id="dynamic-content"></div>
+        </main>
+    </section>
+
+    <div id="loading" class="hidden">
+        <div class="cyber-loader"></div>
+        <p>CARREGANDO...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
