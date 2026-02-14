@@ -258,5 +258,4 @@ function finalizeWhatsApp() {
     window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
-
 function mascaraCep(t) { t.value = t.value.replace(/\D/g,"").replace(/^(\d{5})(\d)/,"$1-$2"); }
